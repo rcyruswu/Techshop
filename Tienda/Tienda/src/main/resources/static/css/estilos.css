@@ -1,0 +1,47 @@
+
+*{
+    font-family:tahoma;
+    background-color: whitesmoke;
+
+
+
+}
+body{
+    background-image: url("../img/camara.jpg");
+    background-repeat: no-repeat;
+    background-position-x:center;
+}
+
+
+h2 {
+    background-color: green;
+    color: white;
+}
+#encabezado {
+    background-color: black;
+    color: #00cc00;
+    text-align: center
+}
+
+.articulo {
+    background-color: bisque;
+    font-family: sans-serif;
+    color: black
+}
+
+footer span {
+    color:blue;
+
+
+
+}
+
+a:hover{
+    
+    background-color: red;
+    color: white;
+} a{
+    
+    background-color: blue;
+    color:yellow;
+}

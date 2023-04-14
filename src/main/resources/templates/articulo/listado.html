@@ -1,0 +1,48 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8">
+        <link href="/css/Menu.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+         
+        <header th:replace="layout/plantilla :: header"/>
+        <div class="contenido">
+        <h2>Nuestros Articulos</h2>
+        <a th:href="@{/articulo/nuevo}">Nuevo Articulo</a>
+        <div th:if="${articulos != null and !articulos.empty}">
+        
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Descripcion</th>
+                    <th>Detalle</th>
+                    <th>Precio</th>
+                    <th>Existencias</th>
+                  
+                    <th>Eliminar</th>
+                    <th>Modificar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="articulo : ${articulos}">
+                    <td th:text="${articulo.Descripcion}"></td>
+                    <td th:text="${articulo.Detalle}"></td>
+                    <td th:text="${articulo.Precio}"></td>
+                    <td th:text="${articulo.Existencias}"></td>
+                    
+                    <td><a th:href="@{/articulo/eliminar/}+${articulo.idArticulo}">Eliminar</a></td>
+                    <td><a th:href="@{/articulo/modificar/}+${articulo.idArticulo}">Modificar</a></td>
+                 
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div th:if="${articulos == null or articulos.empty}">                                            >
+            <!--No tenemos lista de articulos que mostrar...  --> 
+       </div>   
+        </div>
+        <footer th:replace="layout/plantilla::footer"/>
+        
+        </body>
+</html>

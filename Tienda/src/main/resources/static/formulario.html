@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--Esta es nuestra primera página web del curso -->
+<html lang="es">
+<head>
+<title>TechShop</title>
+<meta charset="UTF-8">
+<meta name="description" content="Página principal de la tienda TechShop">
+<meta name="keywords" content="html5,css,TechShop">
+<link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+    <header>
+        <h1 id= "Encabezado">TechShop</h1>
+    </header>
+    <nav>
+        <a href="Ejemplo6.html">Back</a> | <a href="index.html">Home</a> |<a href="Ejemplo2.html">Next</a>
+    </nav>
+
+
+    <section>
+        <h2>Formulario</h2>
+        <article>
+            <header> <h3> Tipos de input</h3>  </header>
+            <hr>
+            <form action="confirmacion.jsp" method="POST">
+                    <fieldset>
+                        <legend> Datos Personales </legend>
+                        <label>Nombre completo</label>
+                        <input type="text" value="texto" required/>
+                        <br/>
+                        <label>Estatura:</label>
+                        <input type="number" name="estatura" 
+                               min="100" 
+                               max="240" value="170"/>                    
+                        <br/>
+                        <label>Hora de nacimiento:</label>
+                        <input type="datetime-local" name="fechaNaci"/>
+                        <br/>
+                        <label>Correo electrónico:</label>
+                        <input type="email" name="correo" placeholder="sucorreo@xxxxx.xxx"/>
+                        <br/>                    
+                        <label>Celular:</label>
+                        <input type="tel" name="telefono"  required  placeholder="9999-6999"/>
+                    </fieldset>
+                    <fieldset>
+                        <legend> Otros datos </legend>
+                        <label>Boton</label>
+                        <input type="button" name="boton1" value="boton1"/>
+                        <br/>
+                        <label>Sus géneros preferidos:</label>
+                        <input type="checkbox" name="accion"/>Accion
+                        <input type="checkbox" name="comedia"/>Comedia
+                        <input type="checkbox" name="terror"/>Terror
+                        <br/>
+                        <label>Seleccione el fondo de pantalla:</label>
+                        <input type="color" name="color"/>
+                        <br/>
+                        <label>Fecha de ingreso:</label>
+                        <input type="date" name="fechaIngre"/>
+                        <br/>
+                        <label>Fotografía:</label>
+                        <input type="file" name="foto"/>
+                        <br/>
+                        <label>Este código no se ve:</label>
+                        <input type="hidden" name="idProducto" value="XHT-001"/>
+                        <br/>                    
+                        <label>Contraseña:</label>
+                        <input type="password" name="clave"/>
+                        <br/>
+                        <label>Horario:</label>
+                        <input type="radio" name="horario" value="M"/> Mañana
+                        <input type="radio" name="horario" value="I"/> Intermedio
+                        <input type="radio" name="horario" value="T"/> Tarde
+                        <input type="radio" name="horario" value="N"/> Noche
+                        <br/>
+                        <label>Contraseña:</label>
+                        <input type="reset" name="Borrar todo"/>
+                        <br/>
+                        <label>Busqueda:</label>
+                        <input type="search" name="buscar" placeholder="Buscar..."/>
+                    </fieldset>
+                    <label>Enviar info</label>
+                    <input type="submit" value="Enviar"/>
+                </form>
+ 
+    </section>
+    <hr>
+    <footer>
+        Sitio desarrollado<span> en el curso Web</span> y Patrones 2022 &COPY; 
+    </footer>
+</body>
+</html>
